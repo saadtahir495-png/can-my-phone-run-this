@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Can My Phone Run It?</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      animation: bgMove 8s infinite alternate;
+    }
+
+    @keyframes bgMove {
+      0% { background-position: left; }
+      100% { background-position: right; }
+    }
+
+    .container {
+      width: 100%;
+      max-width: 900px;
+      background: rgba(0,0,0,0.4);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 30px;
+      animation: fadeIn 1.2s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+      font-size: 2.2rem;
+    }
+
+    p.desc {
+      text-align: center;
+      font-size: 0.95rem;
+      opacity: 0.85;
+      margin-bottom: 25px;
+    }
+
+    .search-box {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+
+    .search-box input {
+      width: 100%;
+      max-width: 400px;
+      padding: 12px 15px;
+      border-radius: 30px;
+      border: none;
+      outline: none;
+      font-size: 1rem;
+    }
+
+    .games {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .game-card {
+      background: rgba(255,255,255,0.08);
+      border-radius: 15px;
+      padding: 20px;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    .game-card:hover {
+      transform: translateY(-8px) scale(1.02);
+      background: rgba(255,255,255,0.15);
+    }
+
+    .game-card h3 {
+      margin-bottom: 8px;
+    }
+
+    .game-card span {
+      font-size: 0.85rem;
+      opacity: 0.85;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 0.8rem;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Can My Phone Run It?</h1>
+    <p class="desc">
+      Check which phones can run popular mobile games smoothly.
+    </p>
+
+    <div class="search-box">
+      <input type="text" placeholder="Search a game..." />
+    </div>
+
+    <div class="games">
+      <div class="game-card">
+        <h3>Genshin Impact</h3>
+        <span>Android 8+ • 4GB RAM+</span>
+      </div>
+
+      <div class="game-card">
+        <h3>Roblox</h3>
+        <span>Android 6+ • 3GB RAM+</span>
+      </div>
+
+      <div class="game-card">
+        <h3>Among Us</h3>
+        <span>Android 6+ • 2GB RAM+</span>
+      </div>
+
+      <div class="game-card">
+        <h3>Rhythm Hive</h3>
+        <span>Android 7+ • 3GB RAM+</span>
+      </div>
+
+      <div class="game-card">
+        <h3>Dream League Soccer 2026</h3>
+        <span>Android 8+ • 3GB RAM+</span>
+      </div>
+    </div>
+
+    <footer>
+      © 2026 • Can My Phone Run It
+    </footer>
+  </div>
+
+</body>
+</html>
