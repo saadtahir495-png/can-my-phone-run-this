@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* animation when page loads */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.1);
+  width: 90%;
+  max-width: 420px;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+
+/* inputs */
+select,
+input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+}
+
+select {
+  background: #ffffff;
+  color: #000;
+}
+
+input {
+  background: #f1f1f1;
+}
+
+/* button */
+button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 15px;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: white;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 114, 255, 0.5);
+}
+
+/* result */
+#result {
+  margin-top: 20px;
+}
+
+/* game card */
+.game-card {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 18px;
+  padding: 15px;
+  text-align: center;
+  animation: pop 0.5s ease;
+}
+
+@keyframes pop {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.game-card img {
+  width: 100%;
+  max-height: 180px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.game-card h3 {
+  margin-bottom: 8px;
+}
+
+/* performance text */
+.good {
+  color: #00ff9c;
+  font-weight: bold;
+}
+
+.low {
+  color: #ffd369;
+  font-weight: bold;
+}
+
+.lag {
+  color: #ff6b6b;
+  font-weight: bold;
+}
